@@ -26,7 +26,7 @@
                 <tr>
                     <td>{{$post->id}}</td>
                     <td>{{$post->user->name}}</td>
-                    <td>{{$post->category_id}}</td>
+                    <td>{{$post->category ? $post->category->name : 'Uncategorized'}}</td>
                     <td><img height="40px" src="{{$post->photo ? $post->photo->file : \App\Photo::getPlaceholder()}}" alt="{{$post->title}}"></td>
                     <td>{{$post->title}}</td>
                     <td>{{$post->body}}</td>
